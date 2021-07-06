@@ -4,7 +4,8 @@ import torch.distributions
 import torch.nn as nn
 import torch.nn.functional as F
 
-from dreamer.models.distribution import TanhBijector, SampleDist
+from torch.distributions import TanhTransform as TanhBijector
+from dreamer.models.distribution import SampleDist
 
 
 class ActionDecoder(nn.Module):
